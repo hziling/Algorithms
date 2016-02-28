@@ -14,7 +14,7 @@ def merge(array, start, mid, end):
 
     i, j = 0, 0
     for k in range(start, end + 1):
-        if j >=n or i < m and L[i] < R[j]:
+        if j >= n or i < m and L[i] < R[j]:
             array[k] = L[i]
             i += 1
         else:
@@ -32,7 +32,6 @@ def merge_sort(array, start, end):
 
 
 class TestSort(unittest.TestCase):
-
     def test_empty(self):
         array = []
         merge_sort(array, 0, 0)
@@ -40,7 +39,7 @@ class TestSort(unittest.TestCase):
 
     def test_sort(self):
         array = [3, 5, 7, 2, 3, 9, 23, 56, 32, 21]
-        merge_sort(array, 0, len(array)-1)
+        merge_sort(array, 0, len(array) - 1)
         self.assertEqual(array, sorted(array))
 
 

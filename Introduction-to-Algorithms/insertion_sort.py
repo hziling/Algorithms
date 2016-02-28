@@ -7,13 +7,12 @@ def insertion_sort(array):
 
         j = i - 1
         while j >= 0 and key < array[j]:
-            array[j+1] = array[j]
+            array[j + 1] = array[j]
             j = j - 1
-        array[j+1] = key
+        array[j + 1] = key
 
 
 class TestSort(unittest.TestCase):
-
     def test_empty(self):
         array = []
         insertion_sort(array)

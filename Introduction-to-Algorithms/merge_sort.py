@@ -1,4 +1,5 @@
 import unittest
+import random
 
 
 def merge(array, start, mid, end):
@@ -38,7 +39,7 @@ class TestSort(unittest.TestCase):
         self.assertEqual(array, sorted(array))
 
     def test_sort(self):
-        array = [3, 5, 7, 2, 3, 9, 23, 56, 32, 21]
+        array = [random.randint(-10000, 10000) for i in range(random.randint(0, 100))]
         merge_sort(array, 0, len(array) - 1)
         self.assertEqual(array, sorted(array))
 

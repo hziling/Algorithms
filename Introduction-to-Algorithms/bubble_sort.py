@@ -1,4 +1,5 @@
 import unittest
+import random
 
 
 def bubble_sort(array):
@@ -15,7 +16,7 @@ class TestSort(unittest.TestCase):
         self.assertEqual(array, sorted(array))
 
     def test_sort(self):
-        array = [3, 5, 7, 2, 3, 9, 23, 56, 32, 21]
+        array = [random.randint(-10000, 10000) for i in range(random.randint(0, 100))]
         bubble_sort(array)
         self.assertEqual(array, sorted(array))
 

@@ -31,3 +31,7 @@ class TestSort(unittest.TestCase):
         result = [0 for i in range(len(array))]
         counting_sort(array, result, 10)
         self.assertEqual(result, sorted(array))
+
+
+if __name__ == '__main__':
+    unittest.main()

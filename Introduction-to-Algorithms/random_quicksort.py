@@ -28,3 +28,7 @@ class TestSort(unittest.TestCase):
         array = [random.randint(-10000, 10000) for i in range(random.randint(0, 100))]
         random_quicksort(array, 0, len(array) - 1)
         self.assertEqual(array, sorted(array))
+
+
+if __name__ == '__main__':
+    unittest.main()

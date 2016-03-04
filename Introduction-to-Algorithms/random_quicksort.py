@@ -11,7 +11,6 @@ def random_quicksort(array, start, end):
         random_quicksort(array, mid + 1, end)
 
 
-
 def random_partition(array, start, end):
     i = random.randint(start, end)
     array[i], array[end] = array[end],array[i]

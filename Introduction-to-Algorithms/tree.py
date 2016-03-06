@@ -70,10 +70,8 @@ def tree_successor(x):
 
 
 def tree_insert(T, x):
-    if T.root is None:
-        T.root = x
-
     y = T.root
+    z = None
     while y is not None:
         z = y
         if x.value < y.value:
@@ -82,7 +80,9 @@ def tree_insert(T, x):
             y = y.right
 
     x.parent = z
-    if x.value < z.value:
+    if z is None:
+        T.root = x
+    elif x.value < z.value:
         z.left = x
     else:
         z.right = x

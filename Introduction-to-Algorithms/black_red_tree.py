@@ -151,4 +151,3 @@ def rb_delete_fixup(T, x):
             pass
 
     x.color = 'BLACK'
-    
